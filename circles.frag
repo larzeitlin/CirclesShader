@@ -5,7 +5,7 @@ bool cirOL(vec2 center, float rad)
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
-	vec4 col1 = vec4( 0., 0, 0., 1.);
+    vec4 col1 = vec4( 0., 0, 0., 1.);
     float f = abs(sin(iTime * 0.02));
     int counter = 0;
     vec2 r =  2.0*vec2(fragCoord.xy - 0.5*iResolution.xy)/iResolution.y;
@@ -28,7 +28,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     
     else
     {
-		col1.r = (float(counter) / 28.);
+	col1.r = (float(counter) / 28.);
     	col1.b = 1. - (float(counter) / 28.);
     	fragColor = col1;
     }
